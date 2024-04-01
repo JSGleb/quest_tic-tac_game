@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* fonts */
+
+@font-face {
+    font-family: 'Madimi';
+    src: url(fonts/MadimiOne-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: aquamarine;
+    background-color: #282525;
+    font-size: 1.6em;
+    margin: 0 15%;
+    font-family: 'Madimi', sans-serif;
+}
+
+#images {
+    height: 650px;
+    background-size: cover;
+    background-position: top;
+    margin-bottom: 1em;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: .8em;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Madimi';
+}
+input::placeholder {
+    font-size: 0.8em;
+    font-family: 'Madimi';
+    font-style: italic;
+}
+
+#buttonBox {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* game */
+.app {
+    width: 640px;
+    height: 480px;
+
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    position: relative;
+}
+
+.app__block {
+    width: 200px;
+    height: 130px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202330;
+    border-radius: 10px;
+}
+.app__block.active {
+    cursor: not-allowed;
+}
+
+.activeGame {
+    display: flex;
+}
+
+.activeBody {
+    display: flex;
+    justify-content: center;
+    transform: translateY(30%);
+}
+
+.app__block.active_x {
+    color: #d64c45;
+}
+
+.app__block.active_o {
+    color: #9393e2
+}
